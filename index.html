@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operativos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Font setup */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1; 
+        }
+        /* Simple animation for revealing elements on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300 antialiased">
+
+    <!-- Header and Navigation -->
+    <header class="bg-gray-900/70 backdrop-blur-lg sticky top-0 z-50 shadow-md shadow-indigo-500/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                 <svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <h1 class="text-2xl font-bold text-white">Menú</h1>
+            </div>
+            <ul class="hidden md:flex space-x-6 text-sm font-medium">
+                <li><a href="#móviles" class="hover:text-indigo-400 transition-colors duration-300">Móviles</a></li>
+                <li><a href="#PC" class="hover:text-indigo-400 transition-colors duration-300">PC</a></li>
+                <li><a href="#Automotrices" class="hover:text-indigo-400 transition-colors duration-300">Automotrices</a></li>
+                <li><a href="#Clústers" class="hover:text-indigo-400 transition-colors duration-300">Clústers</a></li>
+                <li><a href="#Embebidos" class="hover:text-indigo-400 transition-colors duration-300">Embebidos</a></li>
+                <li><a href="#Mainframes" class="hover:text-indigo-400 transition-colors duration-300">Mainframes</a></li>
+                <li><a href="#Redes" class="hover:text-indigo-400 transition-colors duration-300">Redes</a></li>
+                <li><a href="#Relojes" class="hover:text-indigo-400 transition-colors duration-300">Relojes</a></li>
+                <li><a href="#Virtualización" class="hover:text-indigo-400 transition-colors duration-300">Virtualización</a></li>
+                <li><a href="#Workstation" class="hover:text-indigo-400 transition-colors duration-300">Workstation</a></li>
+                <li><a href="#Software Desarrollo" class="hover:text-indigo-400 transition-colors duration-300">Software Desarrollo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Presentación -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section class="text-center my-16">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-4 reveal">Explorando los Sistemas Operativos</h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto reveal" style="transition-delay: 150ms;"></p>
+        </section>
+
+        <!-- Seleccion de Sistemas Operativos -->
+        <div class="space-y-20">
+
+            <!-- Seleccion de moviles-->
+            <section id="móviles" class="scroll-mt-24 reveal">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Sistemas Operativos Móviles</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Android-->
+                    <div class="bg-green-800/50 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                        <img src="https://media.biobiochile.cl/wp-content/uploads/2011/02/Android.jpg" alt="Logo de Android" class="mx-auto rounded-lg w-24 h-24 object-cover mb-4 shadow-2xl shadow-green-500/30">
+                        <h3 class="text-2xl font-bold text-white">Android</h3>
+                        <p class="text-sm mt-2 text-gray-400">Android es un sistema operativo basado en el núcleo de Linux y en componentes de software de código abierto, desarrollado principalmente por Google, destaca por ofrecer una interfaz altamente personalizable mediante launchers, widgets y otras aplicaciones, Android está estructurado en varias capas: Núcleo Linux, Runtime y bibliotecas, Framework de aplicaciones y Aplicaciones base</p>
+                    </div>
+                    <!-- iOS -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy1RxAHsL2GckODz50iIOz_c9c9P5AFy6G0Z8L52GhxV8n3Ux6q9nuEIzmCvJo4PNu9sc&usqp=CAU" alt="Logo de iOS" class="mx-auto rounded-lg w-24 h-24 object-cover mb-4 shadow-2xl shadow-pink-500/30">
+                        <h3 class="text-2xl font-bold text-white">iOS</h3>
+                        <p class="text-sm mt-2 text-gray-400">IOS es el sistema operativo desarrollado por Apple inc. es exclusivo para iPhone, este fue presentado por primera vez en 2007 revolucionando la industria de la telefonía móvil por su interfaz táctil intuitiva y su diseño elegante. IOS destaca por su robusto sistema de seguridad dado que funciona en un sistema cerrado. Esto permite una integración optimizada y una mayor proteccion contra malware</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Selección de PC -->
+            <section id="PC" class="scroll-mt-24 reveal">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Sistemas Operativos de PC</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Windows -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFipqpnKQbDphj_E1Sbq_9kwsDYUFHAHKZGiiA9gXTtw-DPKS4NQQB6Pjyai4Dg1VCDak&usqp=CAU" alt="Logo de Windows" class="mx-auto rounded-lg w-24 h-24 object-cover mb-4 shadow-2xl shadow-blue-500/30">
+                        <h3 class="text-2xl font-bold text-white">Windows</h3>
+                        <p class="text-sm mt-2 text-gray-400">El sistema operativo de Microsoft, ampliamente utilizado en PCs. Conocido por su interfaz gráfica amigable y su compatibilidad con una gran variedad de software y hardware. Las principales características de este sistema operativo son: la interfaz gráfica de usuario (GUI), la gran compatibilidad, el sistema multitareas y el sistema de archivos (NTFS).</p>
+                    </div>
+                    <!-- MacOS -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                         <img src="https://edutic.up.edu.pe/wp-content/uploads/2022/02/macOS_Logo_Edutic.png" alt="Logo de MacOS" class="mx-auto rounded-lg w-24 h-24 object-cover mb-4 shadow-2xl shadow-gray-500/30">
+                        <h3 class="text-2xl font-bold text-white">MacOS</h3>
+                        <p class="text-sm mt-2 text-gray-400">El sistema operativo de Apple para computadoras Mac. Se destaca por su diseño elegante, su integración con otros dispositivos de Apple y su enfoque en la seguridad y la privacidad del usuario. La Mac App Store ofrece una gran selección de aplicaciones de alta calidad.</p>
+                    </div>
+                    <!-- Linux -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                         <img src="https://aety.io/wp-content/uploads/2016/11/linux-logo-2.png" alt="Logo de Linux" class="mx-auto rounded-lg w-24 h-24 object-cover mb-4 shadow-2xl shadow-green-500/30">
+                        <h3 class="text-2xl font-bold text-white">Linux</h3>
+                        <p class="text-sm mt-2 text-gray-400">Un sistema operativo de código abierto basado en Unix. Es conocido por su estabilidad y seguridad, y es ampliamente utilizado en servidores y sistemas embebidos. Linux tiene una gran comunidad de desarrolladores y una vasta cantidad de distribuciones, como Ubuntu, Fedora y CentOS.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- seccion para Automotrices -->
+            <section id="Automotrices" class="scroll-mt-24 reveal">
+                <div class="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                    <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://t4.ftcdn.net/jpg/06/31/25/63/360_F_631256373_9eJ3GcEqXOXVhDUsBEp6nDXmHwfh6T3b.jpg" alt="Logo de Automotrices" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-indigo-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Automotrices</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Los sistemas operativos para automóviles están diseñados para gestionar tanto el hardware como el software de los vehículos, permitiendo la interacción entre diversos módulos como infoentretenimiento, navegación, sensores, y sistemas avanzados de asistencia al conductor (ADAS). Estos sistemas optimizan la experiencia del usuario y la eficiencia del vehículo, integrando aplicaciones, datos y comunicación con diferentes dispositivos.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Sistemas Operativos para Automóviles</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>QNX: Muy utilizado por su fiabilidad,tiempo real y certificaciones de seguridad funcional</li>
+                                    <li>Android Automotive: Basado en Android, permite la personalización y la integración de aplicaciones móviles</li>
+                                    <li>Linux: Algunas distribuciones de Linux se adaptan para su uso en vehículos, ofreciendo flexibilidad y personalización</li>
+                                    <li>Windows Embedded Automotive: Una versión de Windows diseñada específicamente para sistemas de infoentretenimiento en vehículos</li>
+                                    <li>Otros Sistemas propietarios: Tesla OS, MBUX (Mercedes-Benz), Licid UX y otros desarrolladores internos de grandes fabricantes</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Breve Historia</h3>
+                                <p class="text-gray-400">Los sistemas operativos automotrices surgieron en los años 90, evolucionando hacia estándares abiertos y multiplataforma como QNX, Linux y Android Automotive. Actualmente, están enfocados en soportar las demandas de conectividad, autonomía y experiencia de usuario de los vehículos modernos, estos sitemas son esenciales para permitir funciones avanzadas como conducción semiautónoma integración con smartphones, actualización remota y personalización de la experiencia del usuario dentro del automovil.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- seccion para Clústers -->
+            <section id="Clústers" class="scroll-mt-24 reveal">
+                <div class="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                    <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://www.purestorage.com/content/dam/purestorage/knowledge/what-is-high-performance-computing.jpg.imgo.jpg" alt="Logo de Clústers" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-indigo-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Clústers</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Un clúster de computadoras es un conjunto de equipos conectados entre sí que trabajan de manera conjunta como un solo sistema, coordinando recursos para lograr mayor potencia de cómputo, disponibilidad y eficiencia. Los sistemas operativos más empleados en clústers suelen ser variantes de Linux, como CentOS, Ubuntu y Red Hat Enterprise, así como sistemas diseñados específicamente para computación de alto rendimiento (HPC).</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Sistemas Operativos para Clústers</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Linux y variantes especificadas para HPC: Linux domina el mercado con distribuciones especializadas como Ubuntu Server, CentOS, Red Hat Enterprise Linux y entornos personalizados como Cray Linux y HPE Cray OS.</li>
+                                    <li>Sistemas operativos especializados y minimalistas: Existen sistemas como ZeptoOS, FusedOS, Hobbes, NIX, IHK/MCKernel o mOS que son proyectos de investigación o desarrollos experimentales enfocados en modularidad, seguridad eficiencia y escalabilidad.</li>
+                                    <li>Windows Server 2025: Aunque con menor presencia, Windows Server tiene integraciones avanzadas para clústers de conmutación por error y administración moderna en entornos empresariales.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Breve Historia</h3>
+                                <p class="text-gray-400">Los clústers surgieron a mediados del siglo XX impulsados por la necesidad de aumentar el rendimiento y disponibilidad de los sistemas computacionales sin recurrir a supercomputadoras costosas. Con el auge de hardware estándar y software de código abierto (especialmente linux), su adopción se extendió desde universidades hasta empresas privadas y servicios en la nube. Hoy los clústers son clave en investigación científica, cálculos financieros, big data y servicios criticos en linea.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- seccion para Embebidos -->
+            <section id="Embebidos" class="scroll-mt-24 reveal">
+                <div class="bg-cyan-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                    <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://db0dce98.rocketcdn.me/es/files/2024/07/sistemas-embebidos-datascientest-1024x585.jpg" alt="Logo de Embebidos" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-indigo-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Embebidos</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Los sistemas embebidos son dispositivos con recursos limitados y orientados a realizar funciones especificas, ademas de ser eficientes en el uso de la memoria y energía, y a menudo funcionan en tiempo real para controlar dispositivos integrados en productos como automóviles, electrodomesticos, dispositivos médicos y maquinaria industrial.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Sistemas Operativos Embebidos</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Sistemas operativos en tiempo real (RTOS): Diseñados para responder en tiempos limitados y deterministas; ejemplos incluyen FreeRTOS, VxWorks, QNX y ThreadX.</li>
+                                    <li>Linux embebido: Variantes de Linux adaptadas para sistemas embebidos como Yocto, Buildroot Y Android Things, que ofrecen mayor capacidad y flexibilidad con recursos moderados.</li>
+                                    <li>Sistemas propietarios y minimalistas: Muchas compañias desarrollan sistemas operativos embebidos a medida para aplicaciones especificas.</li>
+                                    <li>Sistemas embebidos basados en microcontroladores: El sistema operativo puede ser mínimamente un bucle de ejecución o sin sistema operativo, programado directamente en ensamblador o C.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Breve Historia</h3>
+                                <p class="text-gray-400">Los primeros sistemas embebidos aparecieron en 1980, inicialmente para controlar hardware industrial y electrodomésticos. Con el crecimiento de la electrónica digital y la miniaturización de procesadores y memoria, su uso se extendió a numerosos dispositivos electrónicos y sistemas automatizados. Hoy, los sistemas operativos embebidos abarcan desde soluciones muy sencillas hasta plataformas complejas en IoT, automotriz, telecomunicaciones y domótica.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- seccion para Mainframes-->
+            <section id="Mainframes" class="scroll-mt-24 reveal">
+                <div class="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                    <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://panainformatico.com/wp-content/uploads/2023/04/mainframe-grandes-empresas.jpg" alt="Logo de Mainframe" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-indigo-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Mainframes</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Los mainframes, o grandes computadoras centrales, son equipos de alto rendimiento diseñados para procesar cantidades masivas de datos de forma continua y con una fiabilidad extrema. Sus sistemas operativos son, por tanto, algunos de los más robustos, seguros y complejos del mundo de la computación. Están especializados en el procesamiento transaccional a gran escala (como operaciones bancarias, reservas de aerolíneas o procesamiento de censos) y en la gestión de bases de datos gigantescas.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Sistemas Operativos para Mainframes</h3>
+                               <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>z/OS: Es el sistema operativo insignia y más avanzado para los mainframes de IBM. z/OS es el descendiente directo del OS/360, el sistema operativo que inauguró la era de la computación moderna en la década de 1960. Está diseñado para ofrecer el máximo nivel de estabilidad, seguridad y capacidad de procesamiento. </li>
+                                    <li>z/VSE (Virtual Storage Extended): Un sistema operativo más ligero y sencillo que z/OS, orientado a pequeñas y medianas empresas. Aunque no tiene todas las capacidades avanzadas de z/OS, z/VSE sigue siendo muy potente y es adecuado para muchas aplicaciones empresariales tradicionales.</li>
+                                    <li>z/VM (Virtual Machine): z/VM es un hipervisor de alto rendimiento. Su función principal no es ejecutar aplicaciones directamente, sino crear y gestionar miles de máquinas virtuales en un solo mainframe. Cada máquina virtual puede ejecutar su propio sistema operativo, que puede ser otra instancia de z/OS, z/VSE o, muy comúnmente, Linux.</li>
+                                    <li>Linux on IBM Z: No es un sistema operativo de IBM, sino distribuciones estándar de Linux (como Red Hat, SUSE, Ubuntu) que han sido compiladas y optimizadas para ejecutarse en la arquitectura de hardware del mainframe. Típicamente, se ejecuta dentro de máquinas virtuales gestionadas por z/VM.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Breve Historia</h3>
+                               <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Procesamiento por Lotes (60s-70s): Los primeros sistemas, como OS/360, estaban diseñados para ejecutar trabajos uno tras otro a partir de tarjetas perforadas.</li>
+                                    <li>Interactividad y Virtualización (70s-80s): Sistemas como MVS y VM introdujeron el tiempo compartido (múltiples usuarios interactuando a través de terminales) y la virtualización, permitiendo una utilización mucho más eficiente del hardware.</li>
+                                    <li>Conectividad (90s): Los sistemas operativos de mainframe adoptaron los estándares de redes como TCP/IP, abriéndose al mundo de la computación cliente-servidor.</li>
+                                    <li>Modernización y Código Abierto (2000s - Presente): Con la llegada de z/OS, z/VM y, sobre todo, Linux on Z, los mainframes se transformaron en servidores empresariales modernos, capaces de ejecutar tanto las aplicaciones legacy críticas como las nuevas cargas de trabajo basadas en Java, contenedores y APIs para la nube híbrida.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seleccion para Redes -->
+            <section id="Redes" class="scroll-mt-24 reveal">
+                <div class="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                     <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://tecnobrain.ar/wp-content/uploads/2024/08/switch.jpg" alt="Logo de Redes" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-amber-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Redes</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Los sistemas operativos de red (NOS - Network Operating System) son el software especializado que se ejecuta en dispositivos de red como routers, switches y firewalls. Su función principal es gestionar el hardware del dispositivo y proporcionar las funcionalidades necesarias para dirigir el tráfico de datos a través de una red de manera eficiente, segura y fiable. A diferencia de los sistemas operativos de propósito general (como Windows o macOS), los NOS están altamente optimizados para tareas de red: procesar paquetes de datos a velocidades de línea, implementar protocolos de enrutamiento complejos y aplicar políticas de seguridad.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Sistemas Operativos de Red (NOS)</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Cisco IOS (Internetwork Operating System): Es posiblemente el sistema operativo de red más conocido y extendido del mundo, desarrollado por Cisco Systems. Durante décadas, ha sido el estándar de facto en la industria y la base sobre la cual se han formado la mayoría de los ingenieros de redes.</li>
+                                    <li>Juniper Junos OS: Es el sistema operativo desarrollado por Juniper Networks, el principal competidor de Cisco. Junos OS es conocido por su diseño limpio y su arquitectura superior. A diferencia del IOS original, Junos fue diseñado desde el principio sobre un núcleo de software de código abierto (FreeBSD, un sistema tipo Unix).</li>
+                                    <li>Arista EOS (Extensible Operating System): Es un sistema operativo de red relativamente moderno desarrollado por Arista Networks, una empresa fundada por veteranos de la industria. EOS está construido sobre un núcleo de Linux estándar y sin modificar, lo que lo hace extremadamente abierto y programable. Está enfocado principalmente en los centros de datos a gran escala y la computación en la nube.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Breve Historia</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Era Monolítica (80s-90s): Los primeros sistemas, como el IOS original, eran un único bloque de software fuertemente acoplado al hardware. Eran rápidos pero difíciles de actualizar y un fallo en un componente podía detener todo el sistema.</li>
+                                    <li>Era Modular (Finales de los 90 - 2000s): Sistemas como Junos introdujeron la modularidad, separando los procesos para mejorar la estabilidad y la fiabilidad. El software se basó en núcleos de sistemas operativos robustos como Unix/BSD.</li>
+                                    <li>Era de la Programabilidad y el Desacoplamiento (2010s - Presente): La llegada de la nube y los centros de datos masivos impulsó la necesidad de automatización. Sistemas como EOS, construidos sobre Linux, abrieron los dispositivos de red a los desarrolladores y a las herramientas de DevOps. Surge el concepto de desacoplamiento, donde el sistema operativo de red podría, teóricamente, ejecutarse en hardware de diferentes fabricantes (redes abiertas).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Seleccion para Relojes -->
+            <section id="Relojes" class="scroll-mt-24 reveal">
+                <div class="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                     <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://holatelcel.com/wp-content/uploads/2014/04/android-wear.jpg" alt="Logo de Relojes" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-amber-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Relojes</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Los sistemas operativos para relojes inteligentes son la plataforma de software diseñada para ejecutarse en dispositivos portátiles (wearables) de muñeca. A diferencia de los sistemas para smartphones, están optimizados para pantallas pequeñas, interacciones rápidas y un bajo consumo de energía. Su función principal es conectar el reloj al smartphone, gestionar notificaciones, monitorizar la salud y la actividad física, y ejecutar aplicaciones ligeras.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Sistemas Operativos para Relojes</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Apple watchOS: Es el sistema operativo desarrollado por Apple exclusivamente para su línea de productos Apple Watch. Se caracteriza por su profunda integración con el ecosistema de Apple (iPhone, iCloud, Apple Health, etc.), una interfaz de usuario pulida y un fuerte enfoque en la salud, el fitness y la comunicación. Solo es compatible con el iPhone.</li>
+                                    <li>Google Wear OS: Es la plataforma de Google para relojes inteligentes y otros wearables, diseñada para funcionar en dispositivos de múltiples fabricantes (como Samsung, Google, Fossil, TicWatch). Originalmente conocido como Android Wear, su objetivo es llevar el poder del Asistente de Google, las notificaciones de Android y los servicios de Google a la muñeca.</li>
+                                    <li>Tizen OS for Wearables: Tizen era el sistema operativo de código abierto, basado en Linux, desarrollado y utilizado por Samsung para sus relojes inteligentes (línea Galaxy Watch) y otros dispositivos. Era conocido por su excelente rendimiento, buena duración de la batería y su bisel giratorio para la navegación.</li>
+                                    <li>HarmonyOS (para Wearables): Es el sistema operativo desarrollado por Huawei, diseñado para funcionar en un ecosistema de dispositivos interconectados (teléfonos, tablets, televisores y relojes). En sus smartwatches, HarmonyOS se enfoca en una experiencia fluida, una buena gestión de la batería</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Breve Historia</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Primeros Intentos (2000s): Los primeros relojes inteligentes, como el IBM WatchPad (2001) y el Microsoft SPOT (2004), tenían sistemas operativos muy básicos y limitados, principalmente para mostrar notificaciones y datos simples.</li>
+                                    <li>Era de Android Wear (2014-2018): Google lanzó Android Wear en 2014, marcando el inicio de una era más seria para los relojes inteligentes. La plataforma permitió a múltiples fabricantes crear dispositivos con capacidades avanzadas, aunque la adopción fue lenta debido a problemas de rendimiento y duración de la batería.</li>
+                                    <li>Consolidación y Competencia (2018-Presente): En 2018, Google relanzó la plataforma como Wear OS, buscando mejorar la experiencia del usuario y atraer a más fabricantes. Mientras tanto, Apple consolidó su posición con watchOS, que se convirtió en el sistema operativo líder en el mercado de relojes inteligentes. Samsung también migró sus relojes a Wear OS en 2021, abandonando Tizen.</li>
+                                    <li>Futuro (Presente y Más Allá): La competencia entre watchOS y Wear OS continúa, con ambos sistemas operativos evolucionando rápidamente para ofrecer mejores experiencias de usuario, mayor integración con otros dispositivos y nuevas funcionalidades centradas en la salud y el bienestar.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Seleccion para Virtualización -->
+            <section id="Virtualización" class="scroll-mt-24 reveal">
+                <div class="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                    <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://disetec.com.co/wp-content/uploads/2023/08/beneficios-de-la-virtualizacion.png" alt="Logo de Virtualización" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-sky-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Virtualización</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Los sistemas operativos de virtualización, más conocidos como hipervisores, son plataformas de software que permiten crear y ejecutar máquinas virtuales (VMs). Una máquina virtual es una simulación completa de un sistema informático (CPU, memoria, disco, red) sobre la cual se puede instalar un sistema operativo completo (llamado "sistema operativo invitado"). Existen dos tipos principales de hipervisores: Tipo 1 (Nativo o "Bare Metal") y Tipo 2 (Alojado o "Hosted").</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Sistemas Operativos de Virtualización Tipo 1</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>VMware vSphere ESXi: Es el líder indiscutible del mercado de la virtualización empresarial, desarrollado por VMware. ESXi es un hipervisor de tipo "bare metal" que se instala directamente en el hardware del servidor.</li>
+                                    <li>Microsoft Hyper-V: Es la solución de virtualización de Microsoft y el principal competidor de VMware. Hyper-V viene integrado como un "rol" en las versiones de Windows Server y también está disponible como un producto independiente y gratuito (Hyper-V Server).</li>
+                                    <li>KVM (Kernel-based Virtual Machine): Es la solución de virtualización de código abierto integrada en el núcleo (kernel) de Linux. KVM convierte el propio kernel de Linux en un hipervisor de Tipo 1. No es un sistema operativo independiente, sino una funcionalidad que puede ser activada en cualquier distribución moderna de Linux (como Red Hat, Ubuntu, SUSE)</li>
+                                    <li>Citrix Hypervisor (anteriormente XenServer): Es un hipervisor de Tipo 1 basado en el proyecto de código abierto Xen. Citrix Hypervisor está optimizado para entornos de virtualización de escritorios y aplicaciones (VDI), siendo un componente clave de la suite de productos Citrix Virtual Apps and Desktops.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Breve Historia</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Años 60: Los conceptos de virtualización nacen en los mainframes de IBM (con sistemas como CP/CMS) para compartir los carísimos recursos de una sola máquina entre múltiples usuarios.</li>
+                                    <li>Años 90: La proliferación de servidores x86 baratos crea el problema del "server sprawl" (un servidor, una aplicación), resultando en una ineficiencia masiva.</li>
+                                    <li>1998-2001: VMware revoluciona el mercado al llevar la virtualización de los mainframes al mundo x86 con productos como Workstation y el hipervisor ESX Server, dando inicio a la era del centro de datos moderno.</li>
+                                    <li>2007-2008: La tecnología se masifica. KVM se integra en el kernel de Linux y Microsoft lanza Hyper-V, convirtiendo la virtualización en una característica estándar y no en un producto de nicho.</li>
+                                    <li>2010s - Presente: La virtualización se convierte en la base del Cloud Computing. La evolución continúa con los contenedores (Docker), que virtualizan a nivel de sistema operativo en lugar de hardware, y la orquestación a gran escala con Kubernetes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+                        <!-- Seleccion para Workstation -->
+            <section id="Workstation" class="scroll-mt-24 reveal">
+                <div class="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                    <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://p3-ofp.static.pub//fes/cms/2025/04/30/0r3xbr673ge1p0h3gabru5ipem9upk561656.jpg" alt="Logo de Workstation" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-sky-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Workstation</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Una workstation o estación de trabajo es una computadora de alto rendimiento, diseñada para un solo usuario con tareas profesionales exigentes como diseño gráfico (CAD/CAM), edición de video, animación 3D, cálculo científico, desarrollo de software avanzado o análisis financiero. Por lo tanto, sus sistemas operativos están optimizados para estabilidad bajo cargas pesadas, gestión de grandes cantidades de memoria RAM, soporte para hardware especializado (como GPUs profesionales y múltiples CPUs).</p>
+                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Sistemas Operativos para Workstations</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Windows for Workstations (Pro/Enterprise): Es una edición de gama alta del sistema operativo de escritorio de Microsoft, actualmente Windows 11 Pro for Workstations. Está específicamente diseñada para aprovechar el hardware de estaciones de trabajo modernas y satisfacer las necesidades de cargas de trabajo de misión crítica.</li>
+                                    <li> Apple macOS: Es el sistema operativo de Apple para su línea de computadoras Mac. Históricamente, macOS (anteriormente Mac OS X) ha sido la plataforma preferida en muchas industrias creativas como el diseño gráfico, la edición de video y la producción de audio, gracias a su interfaz de usuario pulida, su estabilidad (basada en Unix) y un ecosistema de software creativo muy maduro.</li>
+                                    <li>Linux (Distribuciones para Workstation): Linux es una opción extremadamente popular para workstations, especialmente en los campos del desarrollo de software, la investigación científica, la ingeniería y los efectos especiales (VFX). No es un único SO, sino un ecosistema de distribuciones (como Ubuntu, Fedora Workstation, Red Hat Enterprise Linux Workstation, SUSE Linux Enterprise Desktop).</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Breve Historia</h3>
+                                 <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>(Años 80 y 90): La era original de las workstations fue dominada por costosas máquinas de fabricantes como Sun Microsystems (Solaris), Silicon Graphics (IRIX), HP (HP-UX) y IBM (AIX). Estos sistemas operativos UNIX propietarios estaban décadas por delante de los PCs de la época en gráficos, redes y multitarea.</li>
+                                    <li>(Mediados de los 90): Microsoft Windows NT ofreció capacidades "suficientemente buenas" (multiprocesamiento, sistema de archivos robusto) en hardware x86 mucho más barato. Esto comenzó a erosionar el mercado de las costosas workstations UNIX.</li>
+                                    <li>(2000s): El mercado se polarizó. Mac OS X, con su base UNIX y su enfoque en la creatividad, capturó a los diseñadores y editores de video. Linux se convirtió en el rey del desarrollo de software, la ciencia y los efectos especiales. Windows dominó en el CAD de ingeniería, la arquitectura y el sector corporativo general.</li>
+                                    <li>Las diferencias de rendimiento se han acortado. La elección de un SO de workstation hoy depende más del ecosistema de software, el flujo de trabajo y la integración con el hardware específico</li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seleccion para Software Desarrollo -->
+            <section id="Software Desarrollo" class="scroll-mt-24 reveal">
+                <div class="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex items-center gap-8 p-8 border border-gray-700">
+                    <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <img src="https://neubox.com/blog/wp-content/uploads/2024/10/IMG-3_Frameworks.webp" alt="Logo de Software Desarrollo" class="mx-auto rounded-lg w-32 h-32 object-cover shadow-2xl shadow-sky-500/30">
+                        <h2 class="text-4xl font-bold text-white mt-4">Software Desarrollo</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">Un Entorno de Desarrollo Integrado es una aplicación de software que consolida las herramientas básicas que los desarrolladores necesitan para escribir y probar software. Un IDE contiene, como mínimo, un editor de código fuente, un compilador o intérprete, y un depurador, a los que se accede a través de una única interfaz gráfica de usuario (GUI), en cambio un framework, en el contexto del desarrollo de software, es una estructura conceptual y tecnológica de soporte definido, con módulos de software concretos, que sirve de base para la organización y desarrollo de software. Proporciona una arquitectura predefinida, un conjunto de bibliotecas y componentes reutilizables, y un flujo de control invertido (Inversion of Control), donde el propio framework es el que invoca el código del desarrollador.</p>
+                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">IDE's y sus lenguajes</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Visual Studio Code (VS Code): Es un editor de código fuente muy ligero y extensible, pero con las extensiones adecuadas funciona como un IDE completo. Es extremadamente popular por su versatilidad. Los lenguajes más utilizados son: JavaScript, TypeScript, Python, Go, Java, y desarrollo web en general (HTML, CSS).</li>
+                                    <li>Visual Studio: Es el IDE más robusto de Microsoft y una opción muy potente para el desarrollo en el ecosistema de Windows y .NET. Los lenguajes más Utilizados son Principalmente C# y Visual Basic para el desarrollo con el framework .NET. También tiene un soporte excelente para C++ (especialmente para desarrollo de aplicaciones y videojuegos en Windows) y Python.</li>
+                                    <li>JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm): JetBrains es una compañía que desarrolla varios IDEs, cada uno especializado en un lenguaje o ecosistema, conocidos por su inteligencia y herramientas de refactorización de código.</li>
+                                    <li>Eclipse: Es un IDE muy conocido y de código abierto, especialmente popular en el mundo del desarrollo empresarial. Es famoso por su excelente soporte para Java. También se utiliza para C/C++, PHP y otros lenguajes a través de plugins.</li>
+                                    <li>Xcode: Es el IDE oficial de Apple, indispensable para desarrollar software para cualquier dispositivo de Apple. Los lenguajes Utilizados son: Swift (el lenguaje moderno de Apple) y Objective-C (el lenguaje más antiguo). Se usa para crear aplicaciones para iOS, macOS, watchOS y tvOS.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <h3 class="font-semibold text-white mb-2">Frameworks para backend y frontend</h3>
+                                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-400">
+                                    <li>Frameworks de Backend</li>
+                                    <li>Express.js (Node.js): Es un framework minimalista y flexible para JavaScript (ejecutado en el entorno Node.js). Es extremadamente popular para construir APIs y aplicaciones web de forma rápida y sencilla.</li>
+                                    <li>Django (Python): Es un framework de "baterías incluidas" para Python. Ofrece una estructura muy completa y segura que incluye un panel de administración, sistema de autenticación y herramientas para interactuar con bases de datos (ORM), ideal para desarrollar aplicaciones complejas rápidamente.</li>
+                                    <li>Spring Boot (Java): Es el framework más popular en el ecosistema de Java para crear microservicios y aplicaciones web robustas y de alto rendimiento. Es muy utilizado en el mundo empresarial por su seguridad y escalabilidad.</li>
+                                    <li></li>
+                                    <li>Frameworks de Frontend</li>
+                                    <li>React (JavaScript): Desarrollado por Meta (Facebook), es una biblioteca (aunque comúnmente se le llama framework) para construir interfaces de usuario basadas en componentes. Es increíblemente popular por su flexibilidad y su gran ecosistema, que incluye herramientas como Redux para el manejo del estado.</li>                               
+                                    <li>Angular (TypeScript): Desarrollado por Google, es un framework completo y robusto para TypeScript (una versión de JavaScript con tipado estático). Ofrece una estructura muy opinionada, ideal para grandes aplicaciones empresariales (SPAs o Single Page Applications)</li>
+                                    <li>Vue.js (JavaScript): Conocido por su curva de aprendizaje suave y su excelente documentación. Es un framework progresivo, lo que significa que puedes usarlo para controlar una pequeña parte de una página o para construir una aplicación completa desde cero. Combina lo mejor de React y Angular en un paquete más ligero.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-20 py-6 border-t border-gray-800">
+        <div class="container mx-auto text-center text-gray-500 text-sm">
+            <p>&copy;Guía de Sistemas Operativos.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="to-top-button" title="Volver arriba" class="hidden fixed bottom-8 right-8 p-3 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition-all duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-indigo-500 transform scale-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Back to Top Button Logic ---
+            const toTopButton = document.getElementById('to-top-button');
+
+            const toggleToTopButton = () => {
+                if (window.scrollY > 300) {
+                    toTopButton.classList.remove('hidden', 'scale-0');
+                    toTopButton.classList.add('scale-100');
+                } else {
+                    toTopButton.classList.remove('scale-100');
+                    toTopButton.classList.add('scale-0');
+                    // Hide after transition ends
+                    setTimeout(() => {
+                        if (window.scrollY <= 300) {
+                           toTopButton.classList.add('hidden');
+                        }
+                    }, 300);
+                }
+            };
+
+            window.addEventListener('scroll', toggleToTopButton);
+
+            toTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // --- Scroll Reveal Animation Logic ---
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // No need to observe it anymore once it's visible
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.1, // Trigger when 10% of the element is visible
+                rootMargin: '0px 0px -50px 0px' // Start animation a bit sooner
+            });
+
+            revealElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
